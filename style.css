@@ -3,6 +3,23 @@
   padding: 0;
 }
 
+@keyframes bouncein {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .container {
   max-width: 500px;
   margin: auto;
@@ -26,16 +43,30 @@
   height: 100px;
   /* border: 2px solid black; */
   border-radius: 100%;
+  animation: bouncein 1s;
 }
 
-.profile > p {
+.profile > h1 {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 0;
+  animation: bouncein 1.5s;
+
+}
+.profile > p {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
   font-weight: 300;
   color: rgb(255, 255, 255);
   text-transform: capitalize;
   text-align: center;
-  padding: 13px;
+  padding: 10px;
+  animation: bouncein 2s;
 }
 
 .link {
@@ -60,7 +91,37 @@
   font-family: "Roboto", sans-serif;
 }
 
+.link .link1 {
+  animation: bouncein 2.5s;
+}
+.link .link2 {
+  animation: bouncein 3s;
+}
+.link .link3 {
+  animation: bouncein 3.5s;
+}
+
 .link > a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  transition-duration: 0.3s;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon a {
+  text-decoration: none;
+  padding: 15px;
+  color: white;
+  border-radius: 10px;
+  animation: bouncein 4s;
+}
+
+.icon > a:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   transition-duration: 0.3s;
